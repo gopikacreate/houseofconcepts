@@ -1,8 +1,8 @@
 .portfolio-container {
-  background: linear-gradient(135deg, #3D8D7A, #265A4F);
-  color: #FBFFE4;
+  background: #E6450D;
+  color: #ffffff;
   font-family: 'Poppins', sans-serif;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .navbar {
@@ -32,12 +32,12 @@
 
 .nav-links li a {
   text-decoration: none;
-  color: #FBFFE4;
+  color: #ffffff;
   transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #5BB197;
+  color: #ff7142;
 }
 
 @media (max-width: 768px) {
@@ -78,13 +78,13 @@
 }
 
 .hero-text h1 {
-  font-size: 48px;
+  font-size: 43px;
   font-weight: bold;
 }
 
 .hero-text p {
   font-size: 18px;
-  color: #FBFFE4;
+  color: #ffffff;
 }
 
 .social-links {
@@ -95,34 +95,35 @@
 }
 
 .social-links a {
-  color: #FBFFE4;
+  color: #ffffff;
   font-size: 24px;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #5BB197;
+  color: #ff7142;
 }
 
 .about-section {
   margin-top: 50px;
   padding: 40px;
-  background: #FBFFE4;
-  color: #3D8D7A;
+  background: #ffffff;
+  color: #E6450D;
   border-radius: 10px;
   text-align: center;
 }
 .about-section p {
-  line-height: 1.8; /* Increases spacing between lines */
+  line-height: 1.5; /* Increases spacing between lines */
   margin-bottom: 15px; /* Adds space between paragraphs */
+  color: #000000;
 }
 
 .about-avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  /* width: 150px;
+  height: 150px; */
+  /* border-radius: 50%; */
   object-fit: cover;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 @media (max-width: 768px) {
@@ -145,8 +146,14 @@
 }
 
 .skills-content {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1000px; */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Align items in the center */
+  flex-wrap: wrap; /* Allow wrapping */
   gap: 20px;
   max-width: 1000px;
 }
@@ -166,14 +173,42 @@
 .skills-category {
   text-align: center;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  background: white;
   border-radius: 8px;
+  color: #000000;
 }
+.tools-category {
+  text-align: center;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  color: #E6450D;
+}
+.soft-skills-section {
+  text-align: center; /* Centers the heading */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #000000;
+ 
+}
+
+.soft-skills-list {
+  list-style-position: inside; /* Ensures bullets align with text */
+  text-align: center; /* Centers text within the list */
+  padding: 0;
+  margin: 0;
+}
+
+
+
 .experience-section {
   margin-top: 50px;
   padding: 40px;
-  background: #FBFFE4;
-  color: #3D8D7A;
+  background: #ffffff;
+  color: #ff7142;
   border-radius: 10px;
   text-align: center;
 }
@@ -198,32 +233,32 @@
 
 .experience-date {
   font-size: 0.9rem;
-  color: #265A4F;
+  color: #ff7142;
   margin-bottom: 5px;
 }
 
 .experience-title {
   font-size: 1.2rem;
-  color: #3D8D7A;
+  color: #ff7142;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
 .experience-title:hover {
-  color: #5BB197;
+  color: #ff7142;
 }
 
 .experience-card p {
   font-size: 1rem;
-  color: #265A4F;
+  color: #ff7142;
   margin: 5px 0;
 }
 .footer {
   text-align: center;
   padding: 20px;
-  background: #265A4F;
-  color: #FBFFE4;
+  background: #FFFFFF;
+  color: #ff7142;
   margin-top: 50px;
   position: relative;
 }
@@ -236,12 +271,12 @@
 }
 
 .scroll-top:hover {
-  color: #5BB197;
+  color: #ff7142;
 }
 .projects-section {
   padding: 50px 20px;
  
-  color: #FBFFE4;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -286,13 +321,13 @@
   display: inline-block;
   margin-top: 10px;
   text-decoration: none;
-  color: #FBFFE4;
+  color: #ffffff;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
 
 .project-card a:hover {
-  color: #5BB197;
+  color: #ff7142;
 }
 
 
@@ -309,3 +344,292 @@
 .college-name:hover {
   opacity: 0.6; /* Optional: Slight fade effect on hover */
 }
+
+
+.brands-section {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #e65100; /* Orange Title */
+  margin-bottom: 40px;
+}
+
+.brands-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two items per row */
+  gap: 40px 30px; /* Increased row gap for better spacing */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brand-item {
+  display: flex;
+  align-items: center; /* Ensure text aligns with the image */
+  gap: 20px;
+  text-align: left;
+}
+
+.brand-image {
+  width: 140px; /* Increased size for better visibility */
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.brand-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Ensures even alignment */
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 6px; /* Reduced bottom margin */
+}
+
+.brand-category {
+  color: gray;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 2px; /* Reduced top margin */
+  margin-bottom: 6px; /* Reduce space below */
+}
+
+.brand-description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px; /* Reduced margin */
+  line-height: 1.4; /* Reduced line height */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .brands-list {
+    grid-template-columns: 1fr; /* Stack in one column on small screens */
+  }
+
+  .brand-item {
+    flex-direction: row; /* Ensure horizontal layout remains */
+  }
+}
+
+
+/* ////////////// */
+
+/* Contact Section */
+.contact-container {
+  text-align: center;
+  padding: 50px;
+ 
+  color: white;
+}
+
+/* Section Headings */
+.contact-heading {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.contact-title {
+  font-size: 30px;
+  margin: 10px 0;
+  color: #000000;
+}
+
+.contact-title span {
+  color:white;
+}
+
+.contact-description {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+/* Contact Content Layout */
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+/* Contact Info (Left Side) */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Contact Card */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  /* width: 280px; */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  color: black;
+  
+  
+}
+
+/* Icon Styling */
+.icon-box {
+  background: #e65100;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+/* Contact Text */
+.contact-label {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 2px; /* Reduce space */
+}
+
+.contact-detail {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0;
+  word-break: break-word;
+}
+
+/* Contact Form (Right Side) */
+.contact-form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  color: black;
+  
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%; /* Ensures it fits inside the container */
+  height: 100px; /* Adjust height as needed */
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical; /* Allow resizing but keep it controlled */
+  box-sizing: border-box; /* Prevents overflowing */
+}
+
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background: #0DB760;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: darkgreen;
+}
+/* Ensure the contact section is flex-based */
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+/* Ensure the form is aligned properly */
+.contact-form {
+  display: flex;
+  flex-direction: column; /* Stack form elements */
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px; /* Adjust width */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+  align-self: flex-start; /* Align left */
+  background: #0DB760;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: darkgreen;
+}
+
+/* 🟢 Make the form go below the address panel on small screens */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    align-items: center; /* Center everything */
+    text-align: center;
+  }
+
+  .contact-info {
+    width: 100%; /* Full width for better spacing */
+  }
+
+  .contact-form {
+    width: 100%; /* Ensure full width */
+    max-width: 400px; /* Prevents it from being too wide */
+  }
+
+  .submit-btn {
+    align-self: center; /* Center button in mobile */
+  }
+}
+
+

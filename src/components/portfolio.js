@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import profilePic from "../images/img1.JPG";
+import profilePic from "../images/img1.png";
+import logo from "../images/img2.png";
+import project1 from "../images/project1.svg"
+import project2 from "../images/project2.svg"
+import project3 from "../images/project3.svg"
+import project4 from "../images/project4.svg"
+
 import {
   FaLinkedin,
   FaGithub,
@@ -18,18 +24,10 @@ import {
   FaLightbulb,
   FaClock,
   FaTasks,
-  FaArrowUp 
+  FaArrowUp,
+  FaPhoneAlt, FaEnvelope, FaMapMarkerAlt
 } from "react-icons/fa";
-import {
-  SiMui,
-  SiPostgresql,
-  SiMongodb,
-  SiTypescript,
-  SiJira,
-  SiDocker,
-  SiC,
-  SiCplusplus,
-} from "react-icons/si";
+
 
 const Portfolio = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,339 +35,311 @@ const Portfolio = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  const ContactCard = ({ icon, title, detail }) => {
+    return (
+      <div className="contact-card">
+        <div className="icon-box">{icon}</div>
+        <div style={{
+            display:"flex",
+            flexDirection:"column",
+            textAlign:'justify'
+        }}>
+          <p className="contact-label">{title}</p>
+          <p className="contact-detail">{detail}</p>
+        </div>
+      </div>
+    );
+  };
+
+  const brands = [
+    {
+      name: "App It Eat",
+      category: "Brand Identity & Strategy",
+      description:
+        "Built a strong brand identity and digital marketing strategy, resulting in increased customer engagement, brand awareness, and online traction.",
+      image: project1,
+    },
+    {
+      name: "Theyyam Restaurant Leeds",
+      category: "Rebranding & Social Media Marketing",
+      description:
+        "Rebranded this South Indian cloud kitchen and executed a social media strategy that turned it from a hidden gem into a must-try destination for authentic flavors.",
+      image: project4,
+    },
+    {
+      name: "Foodle",
+      category: "Brand Identity & Social Media Marketing",
+      description:
+        "Launched a brand that made waves in the food industry, creating a distinct identity and social media buzz that attracted a loyal audience.",
+      image: project3,
+    },
+    {
+      name: "Smart Students Services UK",
+      category: "Brand Identity & Social Media Marketing",
+      description:
+        "Developed a brand identity and marketing strategy to connect with students globally, making academic and professional services more accessible.",
+      image:project2,
+    },
+  ];
 
   return (
     <div className="portfolio-container">
       <nav className="navbar">
-        <h2 className="logo">GOPIKA GOPAKUMAR</h2>
+        <img src={logo} alt="Logo" className="logo" />
+        {/* <h2 className="logo">GOPIKA GOPAKUMAR</h2> */}
         <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </div>
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           <li>
-            <a href="#about-me">About Me</a>
+            <a href="#about-me">About Us</a>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <a href="#services">Services</a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a href="#our-works">Our Works</a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
           </li>
           {/* <li>
             <a href="#certificates">Certificates</a>
           </li> */}
-          <li>
+          {/* <li>
             <a href="/resume.pdf" download="resume.pdf">
               Get Resume
             </a>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <div className="hero-section">
         <div className="hero-text">
-          <h1>Hey, I'm Gopika.</h1>
-          <p>
-            A passionate web developer who loves crafting innovative web
-            solutions.When I'm not coding, you'll find me creating content,
-            exploring new places, or vibing to my favorite playlists. Tech and
-            travel, — that's my world!
+          <h1>Hey, We're House of Concept</h1>
+          <p
+            style={{
+              lineHeight: "24px",
+              letterSpacing: "1px",
+            }}
+          >
+            You’ve got a great idea. We make sure the world sees it, loves it,
+            and remembers it. HOC is a creative agency that crafts bold
+            branding, scroll-stopping content, and marketing strategies that
+            actually work. We don’t do generic. We do game-changing.
           </p>
           <div className="social-links">
-            <a
+            {/* <a
               href="https://www.linkedin.com/in/gopika-gopakumar-0646a2225"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin />
-            </a>
-            <a
+            </a> */}
+            {/* <a
               href="https://github.com/gopikacreate"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub />
-            </a>
+            </a> */}
             <a
-              href="https://www.instagram.com/_gopikanair_?igsh=MXkxam05ZzczMXYyMQ=="
+              href="https://www.instagram.com/house.ofconcept?igsh=OTVhZ3Z5YTJjdWp1"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaInstagram />
             </a>
-            <a
+            {/* <a
               href="https://www.facebook.com/blahblah018"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaFacebook />
-            </a>
-            <a
+            </a> */}
+            {/* <a
               href="https://open.spotify.com/user/31gom7kko2het6yskmro2kdpvhja?si=8Ppx-L3iR5q3e1xLD8Z1ng"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaSpotify />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
 
       <section id="about-me" className="about-section">
         <img src={profilePic} alt="Gopika Gopakumar" className="about-avatar" />
-        <h2>About Me</h2>
+        <h2>About Us</h2>
         <p>
-          Hey there! I'm Gopika, a passionate web developer with a strong
-          foundation in front-end technologies. I hold a{" "}
-          <strong>Bachelor's degree in Information Technology</strong> from
-          &nbsp;
-          <a
-            href="https://www.lbsitw.ac.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="college-name"
-          >
-            <strong>
-              LBS Institute Of Technology for Women, Kerala, India
-            </strong>
-          </a>{" "}
-          and thrive on building seamless, user-friendly web applications.
-         
-          My tech journey kicked off at my first job, where I got hands-on
-          experience with React.js, Material-UI, and REST APIs. I was thrown
-          into the deep end taking over the front-end of a project all on my
-          own. It was challenging, but that experience made me way more
-          confident in my skills. I also worked on other projects, mostly
-          focused on UI design and implementation.
+          We believe marketing should feel less like marketing and more like an
+          experience. That’s why we craft brands that resonate,
+          <br /> campaigns that convert, and content that sticks. Whether it’s a
+          startup finding its voice or a brand looking for a glow-up, we bring{" "}
+          <br /> the strategy, creativity, and execution to make it happen.{" "}
           <br />
-          After two years of working as a web developer, I wanted to expand my
-          skill set beyond front-end technologies. So, I took a break to upskill
-          myself and completed the
-          <strong>
-            {" "}
-            Web Development Bootcamp by Dr. Angela Yu on Udemy.
-          </strong>{" "}
-          This course introduced me to backend development, where I gained
-          hands-on experience with Node.js, Express.js and PostgreSQL. Diving
-          into full-stack development gave me a broader perspective on building
-          complete applications, from crafting engaging UIs to handling
-          databases and APIs. <br />
-          Apart from web development, I have a basic understanding of{" "}
-          <strong>Python, C, and C++,</strong> which I picked up during my
-          college days. While I primarily focus on front-end technologies, my
-          exposure to these languages has helped me grasp core programming
-          concepts and problem-solving techniques. Back in college, I did{" "}
-          <strong>internships and worked on a bunch of mini-projects</strong>,
-          experimenting with different technologies. I love learning,
-          problem-solving, and bringing ideas to life through code. Outside of
-          work? I love traveling, exploring different cultures, and connecting
-          with people from all walks of life. In my free time, you’ll find me
-          checking off items from my bucket list, listening to music, and
-          sharing stories through digital platforms.
+          Our journey? It started with a love for design and storytelling. Now,
+          we’re the creative minds behind brand identities, social media <br />
+          strategies, ad campaigns, and killer content. We don't just market—we
+          make people care.
+          <br /> When we're not busy building brands, we're probably deep in a
+          rabbit hole of design inspo, testing the latest marketing hacks, or{" "}
+          <br />
+          sipping coffee (lots of coffee).
+          <br />{" "}
+        </p>
+        <p>
+          {" "}
+          House of Concept (HOC) is a creative agency specializing in branding,
+          content creation, and digital marketing. We help
+          <br /> businesses tell their stories through design, strategy, and
+          innovation, ensuring they stand out in a crowded marketplace. Whether
+          <br />
+          it’s crafting a compelling brand identity, designing eye-catching
+          visuals, or running data-driven campaigns, we’re all about
+          <br /> making an impact.
         </p>
       </section>
 
-      <section id="skills" className="skills-section">
-        <h2>Skills</h2>
+      <section id="services" className="skills-section">
+        <h2
+          style={{
+            marginBottom: "30px",
+          }}
+        >
+          What We Do Best
+        </h2>
         <div className="skills-categories">
-          <h3>Strong Knowledge</h3>
           <div className="skills-content">
-            <div className="skills-category">
-              <FaReact /> React.js
-            </div>
-            <div className="skills-category">
-              <FaJsSquare /> JavaScript (ES6+)
-            </div>
-            <div className="skills-category">
-              <SiMui /> Material-UI
-            </div>
-            <div className="skills-category">REST APIs</div>
+            <div className="skills-category">Social Media Management</div>
+            <div className="skills-category">Brand Strategy & Development</div>
+            <div className="skills-category">Brand Identity Design</div>
+            <div className="skills-category">Content Creation</div>
+            <div className="skills-category">Video Production & Ads</div>
+            <div className="skills-category">Portfolio Design</div>
+            <div className="skills-category">Pitch Development</div>
+            <div className="skills-category">Influencer Marketing</div>
           </div>
-          <h3>Familiar With</h3>
+          <h3
+            style={{
+              marginTop: "60px",
+              marginBottom: "30px",
+            }}
+          >
+            Also in Our Toolbox
+          </h3>
           <div className="skills-content">
-            <div className="skills-category">
-              <FaNodeJs /> Node.js
-            </div>
-            <div className="skills-category">Express.js</div>
-            <div className="skills-category">
-              <SiPostgresql /> PostgreSQL
-            </div>
-            <div className="skills-category">
-              <SiMongodb /> MongoDB
-            </div>
-            <div className="skills-category">
-              <SiTypescript /> TypeScript
-            </div>
-            <div className="skills-category">
-              <FaAws /> AWS (Cognito, Lambda)
-            </div>
-            <div className="skills-category">CI/CD</div>
-            <div className="skills-category">
-              <SiDocker /> Docker
-            </div>
-            <div className="skills-category">
-              <SiJira /> Jira
-            </div>
-            <div className="skills-category">
-              <FaGitAlt /> Git/GitHub
-            </div>
-            <div className="skills-category">Agile (Scrum, Kanban)</div>
-            <div className="skills-category">
-              <FaPython /> Python
-            </div>
-            <div className="skills-category">
-              <SiC /> C
-            </div>
-            <div className="skills-category">
-              <SiCplusplus /> C++
-            </div>
+            <div className="tools-category">Ad Production & Strategy</div>
+            <div className="tools-category">Copywriting & Storytelling</div>
+            <div className="tools-category">Creative Consulting</div>
           </div>
         </div>
-        <h2>Soft Skills</h2>
-        <div className="skills-content">
-          <div className="skills-category">
-            <FaUsers /> Communication
-          </div>
-          <div className="skills-category">
-            <FaLightbulb /> Problem-Solving
-          </div>
-          <div className="skills-category">
-            <FaClock /> Time Management
-          </div>
-          <div className="skills-category">
-            <FaTasks /> Teamwork
-          </div>
+        <div className="soft-skills-section">
+          <h3
+            style={{
+              color: "white",
+              marginTop:"40px",
+              marginBottom:"25px"
+            }}
+          >
+            Soft skills we take seriously when hiring
+          </h3>
+          <ul className="soft-skills-list">
+            <li
+              style={{
+                marginBottom: "10px",
+              }}
+            >
+              Communication (we actually listen)
+            </li>
+            <li
+              style={{
+                marginBottom: "10px",
+              }}
+            >
+              Creative Problem-Solving (we thrive on challenges)
+            </li>
+            <li
+              style={{
+                marginBottom: "10px",
+              }}
+            >
+              Time Management (because deadlines are sacred)
+            </li>
+            <li
+              style={{
+                marginBottom: "10px",
+              }}
+            >
+              Strategic Thinking (no fluff, just results)
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section id="experience" className="experience-section">
-        <h2>Experience</h2>
-        <div className="experience-card">
-          <p className="experience-date">July 2022 – July 2024</p>
-          <a
-            href="https://xminds.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="experience-title"
-          >
-            Software Developer · Xminds Infotech
-          </a>
-          <p>
-            Developed scalable React.js applications, improving page load speeds
-            by 40%.
-          </p>
-          <p>
-            Integrated secure REST APIs and optimized API calls, reducing
-            response times by 30%.
-          </p>
-          <p>
-            Designed and implemented graph visualization tools, decreasing data
-            analysis time by 30%.
-          </p>
-        </div>
-        <div className="experience-card">
-          <p className="experience-date">Internship</p>
-          <a
-            href="https://keltron.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="experience-title"
-          >
-            Hardware-Software Co-Design Intern · Keltron
-          </a>
-          <p>
-            Gained hands-on experience in sensor interfacing and IoT deployment.
-          </p>
-        </div>
-        <div className="experience-card">
-          <p className="experience-date">Internship</p>
-          <a
-            href="https://ktu.edu.in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="experience-title"
-          >
-            Computer Hardware & Networking Intern · APJ Abdul Kalam University
-          </a>
-          <p>
-            Worked on networking fundamentals and troubleshooting hardware
-            issues.
-          </p>
-        </div>
-      </section>
-      <section id="projects" className="projects-section">
-        <h2>Projects</h2>
-        <div className="projects-container">
-          <div className="project-card">
-            <h3>Datafree Portal</h3>
-            <p>
-              Built an interactive web application, streamlining data access for
-              500+ users.
-            </p>
-            <div className="tech-stack">
-              <FaReact /> <SiMui /> <FaAws />
-            </div>
-          </div>
-          <div className="project-card">
-            <h3>Pixovo</h3>
-            <p>
-              Developed a user-friendly interface, enhancing user experience and
-              accessibility.
-            </p>
-            <div className="tech-stack">
-              <FaReact /> <SiMui />
-            </div>
-          </div>
-          <div className="project-card">
-            <h3>Comeonda</h3>
-            <p>
-              Created a responsive web application, optimizing data
-              functionality and UI performance.
-            </p>
-            <div className="tech-stack">
-              <FaReact /> <SiMui /> <FaNodeJs />
-            </div>
-          </div>
-          <div className="project-card">
-            <h3>Smart Irrigation System</h3>
-            <p>
-            Designed a prototype to improve water efficiency in irrigation systems using Arduino and sensors.
-            </p>
-            <div className="tech-stack">
-              <SiC /> <SiCplusplus />
-            </div>
-          </div>
-          <div className="project-card">
-            <h3>Library Management System</h3>
-            <p>
-              Developed a streamlined system for managing library operations
-              efficiently.
-            </p>
-            <div className="tech-stack">
-              <FaDatabase />
-            </div>
-          </div>
+  
+     <section id="our-works" className="brands-section">
+      {/* Title */}
+      <h2 className="section-title">Brands We've Worked With</h2>
 
-          <div className="project-card">
-            <h3>Diabetic Retinopathy Detection</h3>
-            <p>
-            Compared pre-built models for accurate retinal abnormality detection using deep learning.
-            </p>
-            <div className="tech-stack">
-              <FaPython /> <FaBrain />
+      {/* Brands List */}
+      <div className="brands-list">
+        {brands.map((brand, index) => (
+          <div key={index} className="brand-item">
+            <img src={brand.image} alt={brand.name} className="brand-image" />
+            <div className="brand-info">
+              <h3 className="brand-name">{brand.name}</h3>
+              <p className="brand-category">{brand.category}</p>
+              <p className="brand-description">{brand.description}</p>
             </div>
           </div>
+        ))}
+      </div>
+    </section>
+
+
+
+    <section id="contact" className="contact-container">
+      <h3 className="contact-heading">Contact</h3>
+      <h2 className="contact-title">
+        Let’s Discuss Your <span>Project</span>
+      </h2>
+      <p className="contact-description">
+        Let’s make something new, different, and more<br/>meaningful or make things
+        more visual or conceptual.
+      </p>
+
+      <div className="contact-content">
+        {/* Left Side - Contact Info */}
+        <div className="contact-info">
+          <ContactCard icon={<FaPhoneAlt />} title="Call me" detail="+8801613968687" />
+          <ContactCard icon={<FaEnvelope />} title="Email me" detail="ahmedtanvir8687@gmail.com" />
+          <ContactCard icon={<FaMapMarkerAlt />} title="Address" detail="Zakigonj,Sylhet,Bangladesh." />
         </div>
-      </section>
+
+        {/* Right Side - Form */}
+        <div className="contact-form">
+          <div className="form-row">
+            <input type="text" placeholder="Full name" />
+            <input type="email" placeholder="Your email" />
+          </div>
+          <div className="form-row">
+            <input type="text" placeholder="Phone number" />
+            <input type="text" placeholder="Budget" />
+          </div>
+          <textarea placeholder="Message"></textarea>
+          <button className="submit-btn">Submit Message</button>
+        </div>
+       
+      </div>
+     
+    </section>
 
       <footer className="footer">
         <p>
-          © {new Date().getFullYear()} Gopika Gopakumar. All rights reserved.
+          © {new Date().getFullYear()} House of concepts. All rights reserved.
         </p>
         <div className="scroll-top" onClick={scrollToTop}>
-        <FaArrowUp size={20} /> Back to Top
+           Back to Top
         </div>
       </footer>
     </div>
