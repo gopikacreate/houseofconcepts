@@ -1,33 +1,17 @@
 import React, { useState } from "react";
 import profilePic from "../images/img1.png";
 import logo from "../images/img2.png";
-import project1 from "../images/project1.svg"
-import project2 from "../images/project2.svg"
-import project3 from "../images/project3.svg"
-import project4 from "../images/project4.svg"
+import project1 from "../images/project1.svg";
+import project2 from "../images/project2.svg";
+import project3 from "../images/project3.svg";
+import project4 from "../images/project4.svg";
 
 import {
-  FaLinkedin,
-  FaGithub,
   FaInstagram,
-  FaFacebook,
-  FaSpotify,
-  FaBrain,
-  FaReact,
-  FaJsSquare,
-  FaNodeJs,
-  FaDatabase,
-  FaAws,
-  FaGitAlt,
-  FaPython,
-  FaUsers,
-  FaLightbulb,
-  FaClock,
-  FaTasks,
-  FaArrowUp,
-  FaPhoneAlt, FaEnvelope, FaMapMarkerAlt
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
-
 
 const Portfolio = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,11 +23,13 @@ const Portfolio = () => {
     return (
       <div className="contact-card">
         <div className="icon-box">{icon}</div>
-        <div style={{
-            display:"flex",
-            flexDirection:"column",
-            textAlign:'justify'
-        }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            textAlign: "justify",
+          }}
+        >
           <p className="contact-label">{title}</p>
           <p className="contact-detail">{detail}</p>
         </div>
@@ -78,7 +64,7 @@ const Portfolio = () => {
       category: "Brand Identity & Social Media Marketing",
       description:
         "Developed a brand identity and marketing strategy to connect with students globally, making academic and professional services more accessible.",
-      image:project2,
+      image: project2,
     },
   ];
 
@@ -237,8 +223,8 @@ const Portfolio = () => {
           <h3
             style={{
               color: "white",
-              marginTop:"40px",
-              marginBottom:"25px"
+              marginTop: "40px",
+              marginBottom: "25px",
             }}
           >
             Soft skills we take seriously when hiring
@@ -276,70 +262,78 @@ const Portfolio = () => {
         </div>
       </section>
 
-  
-     <section id="our-works" className="brands-section">
-      {/* Title */}
-      <h2 className="section-title">Brands We've Worked With</h2>
+      <section id="our-works" className="brands-section">
+        {/* Title */}
+        <h2 className="section-title">Brands We've Worked With</h2>
 
-      {/* Brands List */}
-      <div className="brands-list">
-        {brands.map((brand, index) => (
-          <div key={index} className="brand-item">
-            <img src={brand.image} alt={brand.name} className="brand-image" />
-            <div className="brand-info">
-              <h3 className="brand-name">{brand.name}</h3>
-              <p className="brand-category">{brand.category}</p>
-              <p className="brand-description">{brand.description}</p>
+        {/* Brands List */}
+        <div className="brands-list">
+          {brands.map((brand, index) => (
+            <div key={index} className="brand-item">
+              <img src={brand.image} alt={brand.name} className="brand-image" />
+              <div className="brand-info">
+                <h3 className="brand-name">{brand.name}</h3>
+                <p className="brand-category">{brand.category}</p>
+                <p className="brand-description">{brand.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
-
-
-
-    <section id="contact" className="contact-container">
-      <h3 className="contact-heading">Contact</h3>
-      <h2 className="contact-title">
-        Let’s Discuss Your <span>Project</span>
-      </h2>
-      <p className="contact-description">
-        Let’s make something new, different, and more<br/>meaningful or make things
-        more visual or conceptual.
-      </p>
-
-      <div className="contact-content">
-        {/* Left Side - Contact Info */}
-        <div className="contact-info">
-          <ContactCard icon={<FaPhoneAlt />} title="Call me" detail="+8801613968687" />
-          <ContactCard icon={<FaEnvelope />} title="Email me" detail="ahmedtanvir8687@gmail.com" />
-          <ContactCard icon={<FaMapMarkerAlt />} title="Address" detail="Zakigonj,Sylhet,Bangladesh." />
+          ))}
         </div>
+      </section>
 
-        {/* Right Side - Form */}
-        <div className="contact-form">
-          <div className="form-row">
-            <input type="text" placeholder="Full name" />
-            <input type="email" placeholder="Your email" />
+      <section id="contact" className="contact-container">
+        <h3 className="contact-heading">Contact</h3>
+        <h2 className="contact-title">
+          Let’s Discuss Your <span>Project</span>
+        </h2>
+        <p className="contact-description">
+          Let’s make something new, different, and more
+          <br />
+          meaningful or make things more visual or conceptual.
+        </p>
+
+        <div className="contact-content">
+          {/* Left Side - Contact Info */}
+          <div className="contact-info">
+            <ContactCard
+              icon={<FaPhoneAlt />}
+              title="Call me"
+              detail="+8801613968687"
+            />
+            <ContactCard
+              icon={<FaEnvelope />}
+              title="Email me"
+              detail="ahmedtanvir8687@gmail.com"
+            />
+            <ContactCard
+              icon={<FaMapMarkerAlt />}
+              title="Address"
+              detail="Zakigonj,Sylhet,Bangladesh."
+            />
           </div>
-          <div className="form-row">
-            <input type="text" placeholder="Phone number" />
-            <input type="text" placeholder="Budget" />
+
+          {/* Right Side - Form */}
+          <div className="contact-form">
+            <div className="form-row">
+              <input type="text" placeholder="Full name" />
+              <input type="email" placeholder="Your email" />
+            </div>
+            <div className="form-row">
+              <input type="text" placeholder="Phone number" />
+              <input type="text" placeholder="Budget" />
+            </div>
+            <textarea placeholder="Message"></textarea>
+            <button className="submit-btn">Submit Message</button>
           </div>
-          <textarea placeholder="Message"></textarea>
-          <button className="submit-btn">Submit Message</button>
         </div>
-       
-      </div>
-     
-    </section>
+      </section>
 
       <footer className="footer">
         <p>
           © {new Date().getFullYear()} House of concepts. All rights reserved.
         </p>
         <div className="scroll-top" onClick={scrollToTop}>
-           Back to Top
+          Back to Top
         </div>
       </footer>
     </div>
