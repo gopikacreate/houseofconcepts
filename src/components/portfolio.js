@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import profilePic from "../images/img1.png";
-import logo from "../images/img2.png";
+import profilePic from "../images/img1.svg";
+import logo from "../images/img2.svg";
 import project1 from "../images/project1.svg";
 import project2 from "../images/project2.svg";
 import project3 from "../images/project3.svg";
